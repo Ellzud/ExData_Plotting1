@@ -10,7 +10,7 @@ dates <- filter(data1, Date == "2007-02-01" | Date == "2007-02-02")
 tiempo <- paste(dates$Date, " ", dates$Time)
 dates$Time <- strptime(tiempo, "%Y-%m-%d %H:%M:%S")
 
-## initialize the plot with correct labels and add the line graphs
+## call to parameters to be able to plot multiple graphs
 par(mfrow= c(2,2))
 ## plot 1
 plot(dates$Time, dates$Global_active_power, type="n", xlab="", ylab="Global Active Power")
