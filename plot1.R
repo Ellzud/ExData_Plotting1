@@ -8,4 +8,8 @@ dates <- filter(data1, Date == "2007-02-01" | Date == "2007-02-02")
 
 dates$Time <- strptime(dates$Time, "%H:%M:%S") ## convert variable to R time
 ## create the histogram
-hist(dates$Global_active_power, col="red", xlab="Global Active Power (kilowatts)")
+hist(dates$Global_active_power, col="red", xlab="Global Active Power (kilowatts)", main="Global Active Power")
+
+## write plot to a file
+dev.copy(png, file="plot1.png")  ## create file
+dev.off ## close device
