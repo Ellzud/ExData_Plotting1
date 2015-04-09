@@ -28,7 +28,8 @@ legend("topright",
        c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"),
        lty= c(1,1), ## symbols in the legend (lines)
        col= c("black", "red", "blue"),
-       bty="n")
+       bty="n",
+       cex = 0.6)
 ## plot 4
 plot(dates$Time, dates$Global_reactive_power, type="n", xlab="datetime", ylab="Global_reactive_power")
 lines(dates$Time, dates$Global_reactive_power, type="l")
